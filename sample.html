@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBM Calculator</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <h1>CBM Calculator</h1>
+  <div class="main">
+    <form id="cbmForm">
+      <!-- quantity input section -->
+      <div class="quantity-section">
+        <label for="height"># of units</label>
+        <input type="number" id="quantity" step="0.01" placeholder="Quantity" required><br>
+      </div>
+
+      <!-- dimensions input section -->
+      <div class="form">
+        <label for="height">Dimensions <span>(L x W x H per unit)</span></label>
+        <div class="upsection">
+          <div class="length-section">
+            <!-- <label for="length">Length (CM):</label> -->
+            <input type="number" id="length" step="0.01" placeholder="Length" required><br>
+          </div>
+          <div class="width-section">
+            <!-- <label for="width">Width (CM):</label> -->
+            <input type="number" id="width" step="0.01" placeholder="Width" required><br>
+          </div>
+          <div class="height-section">
+            <!-- <label for="height">Height (CM):</label> -->
+            <input type="number" id="height" step="0.01" placeholder="Height" required><br>
+          </div>
+          <select name="measurement" id="measuring-unit" required>
+            <option value="cm">CM</option>
+            <option value="inch">IN</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- weight input section -->      
+      <div class="weight-section">
+        <label for="height">Weight <span>(per unit)</span></label>
+        <div class="weight-input-section">
+          <input type="number" id="weight" step="0.01" placeholder="Weight" required><br>
+          <select name="measurement-2" id="measuring-unit-2" required>
+            <option value="Kg">KG</option>
+            <option value="Lbs">LBS</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit">Calculate</button>
+    </form>
+
+  </div>
+  <div id="result"></div>
+  <script src="sample.js"></script>
+</body>
+
+</html>
+
+<!-- cbm.toFixed(3); -->
