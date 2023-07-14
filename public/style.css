@@ -167,3 +167,24 @@ label{
 label span{
     color: gray;
 }
+
+@media(max-width:450px){
+    .upsection{
+        /* display: flex; */
+        flex-direction: column;
+        width: fit-content;
+        /* gap: 10px; */
+        align-items: center;
+    }
+    #measuring-unit{
+        width: 100%;
+    }
+    .form{
+        align-items: center;
+    }
+
+    .weight-section{
+        margin-top: 20px;
+    }
+
+}

@@ -145,11 +145,10 @@ function cbmDisplay(l, w, h, qty, wt) {
   const seaVolumetricWeight = ((w * l * h) / 1000) * qty;
 
   resultDiv.innerHTML = `
-    <p>The CBM : ${cbm.toFixed(3)}</p>
-    <p>The Gross Weight : ${grossWeight}</p>
-    <p>The Volumetric Weight (Air freight) : ${airVolumetricWeight.toFixed(3)}</p>
-    <p>The Volumetric Weight (Sea freight) : ${seaVolumetricWeight.toFixed(3)}</p>
-    <p href="#" class="disclaimer">The provided data may not be accurate. Contact a fright forwarder for more details</p>
+    <p>CBM : ${cbm.toFixed(3)} m<sup>3</sup></p>
+    <p>Gross Weight : ${grossWeight} kgs</p>
+    <p>Volumetric Weight (Air freight) : ${airVolumetricWeight.toFixed(3)} kgs</p>
+    <p>Volumetric Weight (Sea freight) : ${seaVolumetricWeight.toFixed(3)} kgs</p>
   `;
 
   resultDiv.classList.remove("error");
@@ -174,11 +173,11 @@ function cftDisplay(l, w, h, qty, wt) {
   const seaVolumetricWeight = ((((l * w * h) / 1728) * 28.3168)*2.20462) * qty;
 
   resultDiv.innerHTML = `
-    <p>The CFT : ${cft.toFixed(3)}</p>
-    <p>The Gross Weight (in kg) : ${grossWeight}</p>
-    <p>The Volumetric Weight (Air freight) : ${airVolumetricWeight.toFixed(3)}</p>
-    <p>The Volumetric Weight (Sea freight) : ${seaVolumetricWeight.toFixed(3)}</p>
-    <p href="#" class="disclaimer">The provided data may not be accurate. Contact a fright forwarder for more details</p>
+    <p>CFT : ${cft.toFixed(3)} ft<sup>3</sup></p>
+    <p>Gross Weight : ${grossWeight} Lbs</p>
+    <p>Gross Weight(kg) : ${(grossWeight/2.205).toFixed(3)} kgs</p>
+    <p>Volumetric Weight (Air freight) : ${airVolumetricWeight.toFixed(3)} Lbs</p>
+    <p>Volumetric Weight (Sea freight) : ${seaVolumetricWeight.toFixed(3)} Lbs</p>
   `;
   resultDiv.classList.remove("error");
 }
